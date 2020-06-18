@@ -1,19 +1,3 @@
-# startec-test
-Desafio Técnico
-
-
-# criação da tabela
-CREATE TABLE `tests` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  `deleted` tinyint(4) DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
-
-# criação do conteúdo da tabela
 INSERT INTO `tests` (`id`, `name`, `created_at`, `updated_at`, `deleted`)
 VALUES
 	(1, 'Teste 1', '2020-06-18 12:20:00', '2020-06-18 12:30:00', 0),
