@@ -2,8 +2,8 @@
 /**
  * Springy Framework general configuration file.
  *
- * @copyright 2007 Fernando Val
- * @author    Fernando Val <fernando.val@gmail.com>
+ * @copyright 2020 Luciano Fuza
+ * @author    Luciano Fuza <luciano@fuza.com.br>
  *
  * @version   3.4.2.21
  */
@@ -21,7 +21,7 @@ $GLOBALS['SYSTEM'] = [
         'localhost'             => 'development',
         '127\.0\.0\.1'          => 'development',
         '(www\.)?startec-teste\.com' => 'development',
-        'ec2-54-160-127-99.compute-1.amazonaws.com/\.com' => 'production',
+        'ec2-54-160-127-99.compute-1.amazonaws.com\.com' => 'production',
     ],
 
     // Web server doc root directory
