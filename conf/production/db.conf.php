@@ -34,8 +34,8 @@ $conf = [
     ],
     'default' => [
         'database_type' => 'mysql',
-        'host_name'     => 'localhost',
-        'user_name'     => 'pma',
+        'host_name'     => '127.0.0.1',
+        'user_name'     => 'root',
         'password'      => 'vd7HPpW2#fulMsi@',
         'database'      => 'startec-teste',
         'charset'       => 'utf8',
