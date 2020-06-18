@@ -37,7 +37,7 @@ $conf = [
         'host_name'     => '127.0.0.1',
         'user_name'     => 'root',
         'password'      => 'vd7HPpW2#fulMsi@',
-        'database'      => 'startec-teste',
+        'database'      => 'startec-test',
         'charset'       => 'utf8',
         'persistent'    => false,
     ],
