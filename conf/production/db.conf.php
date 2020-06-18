@@ -23,8 +23,8 @@
 /// Configurações para o ambiente de Produção
 $conf = [
     'round_robin' => [
-        'type'        => 'memcached',
-        'server_addr' => 'youmemcachedserver.localnetwork',
+        'type'        => 'file',
+        'server_addr' => sysconf('VAR_PATH'),
         'server_port' => 11211,
     ],
     'cache' => [
