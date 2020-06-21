@@ -7,21 +7,36 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<title>{$SYSTEM_NAME} ({$SYSTEM_VERSION})</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<title>{$SYSTEM_NAME}</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 	</head>
 	<body>
-		<h1>{$SYSTEM_NAME} ({$SYSTEM_VERSION})</h1>
+		<h1 class="ml-1">
+			<a href="http://{$smarty.server.HTTP_HOST}" class="link-primary text-decoration-none" data-toggle="tooltip" data-placement="right" title="Home">{$SYSTEM_NAME}</a>
+		</h1>
 
 		<div class="container text-center">
-			<p><strong>Bem vindo!</strong></p>
-			<p></p>
-			<p>Para testar a rota test clique no link abaixo:</p>
-			<p><a href="{$urlCurrentURL}test">{$urlCurrentURL}test</a></p>
+
+			<div class="row g-0 bg-light position-relative">
+				<div class="col-md-6 mb-md-0 p-md-4">
+					<img src="screenshot.png" width="100%" />
+				</div>
+				<div class="col-md-6 p-4 pl-md-0">
+				  <h5 class="mt-2">Olá, seja bem vindo!</h5>
+				  <p class="pt-2">Clique neste card ou no botão para testar a rota test.</p>
+				  <a href="{$urlCurrentURL}test" class="btn btn-primary stretched-link">{$urlCurrentURL}test</a>
+				</div>
+			  </div>			
 		</div>
 
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+		<script>
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+				return new bootstrap.Tooltip(tooltipTriggerEl)
+			})
+		</script>
 	</body>
 </html>
 {/strip}

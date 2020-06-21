@@ -25,6 +25,7 @@
 
 /// Configurações para o ambiente de Produção
 $conf = [
+    'debug'              => false,
     'maintenance'        => false,
     'bug_authentication' => [
         'user' => 'username',

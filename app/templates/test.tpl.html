@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 {strip}
-<html>
+<htm>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Language" content="pt-br, en">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<title>{$SYSTEM_NAME} ({$SYSTEM_VERSION})</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<title>{$SYSTEM_NAME}</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 	</head>
 	<body>
-		<h1>Startec Test</h1>
-
-		<div class="container">
+		<h1 class="ml-1">
+			<a href="http://{$smarty.server.HTTP_HOST}" class="link-primary text-decoration-none" data-toggle="tooltip" data-placement="right" title="Home">{$SYSTEM_NAME}</a>
+		</h1>
+		
+		<div class="container border rounded pb-2">
 			<p><strong>List of table test</strong></p>
 
-			<div class="row bg-primary">
+			<div class="row bg-secondary bg-gradient rounded text-white">
 				<div class="col-sm-1">ID</div>
 				<div class="col-sm-6">Name</div>
 				<div class="col-sm-2">Created At</div>
 				<div class="col-sm-2">Updated At</div>
-				<div class="col-sm-1 text-center">Deleted?</div>
+				<div class="col-sm-1"><span lang="en">Deleted?</span></div>
 			</div>
 
 			{if $tests}
 				{foreach from=$tests item=test key=key}
-			<div class="row {cycle values="bg-info, "}">
+			<div class="row {cycle values='bg-light, '}">
 				<div class="col-sm-1">{$test.id}</div>
 				<div class="col-sm-6">{$test.name}</div>
 				<div class="col-sm-2">{$test.created_at|date_format:"%d/%m/%Y %H:%M:%S"}</div>
 				<div class="col-sm-2">{$test.updated_at|date_format:"%d/%m/%Y %H:%M:%S"}</div>
-				<div class="col-sm-1 text-center">{if $test.deleted}YES{else}NO{/if}</div>
+				<div class="col-sm-1">{if $test.deleted}<span class="font-weight-bold text-danger">YES</span>{else}<span class="text-black-50">NO</span>{/if}</div>
 			</div>
 				{/foreach}
-			<div class="row bg-primary">
+			<div class="row bg-secondary bg-gradient rounded text-white">
 				<div class="col-sm-12">{count($tests)} items.</div>
 			</div>
 			{else}
-			<div class="row bg-warning">
+			<div class="row bg-warning bg-gradient rounded text-black">
 				<div class="col-sm-12">List is empty.</div>
 			</div>
 			{/if}
 			
 		</div>
 
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+		<script>
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+				return new bootstrap.Tooltip(tooltipTriggerEl)
+			})
+		</script>
 	</body>
 </html>
 {/strip}
-
-
