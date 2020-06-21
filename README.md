@@ -1,9 +1,19 @@
 # startec-test
 Desafio Técnico
 
+
 # Qual o desafio?
 Criar uma tabela no banco de dados e configurar algumas informações utilizando o framework Springy.
 Hospedar a aplicação em uma máquina virtual AWS e o código em um repositóriono GitHub.
+
+
+# Tecnologias utilizadas
+PHP
+Springy
+Smarty
+Bootstrap 5
+AWS EC2
+
 
 # url
 http://ec2-54-160-127-99.compute-1.amazonaws.com
