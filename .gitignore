@@ -2,3 +2,5 @@ composer.lock
 vendor
 startec-test.pem
 Anotações.txt
+conf/development/db.conf.php
+conf/production/db.conf.php
