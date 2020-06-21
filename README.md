@@ -9,9 +9,13 @@ Hospedar a aplicação em uma máquina virtual AWS e o código em um repositóri
 
 # Tecnologias utilizadas
 PHP
+
 Springy
+
 Smarty
+
 Bootstrap 5
+
 AWS EC2
 
 
